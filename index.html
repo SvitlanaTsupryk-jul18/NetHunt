@@ -17,7 +17,18 @@
 
     <header class="header">
     </header>
+    <div class="form-wrapper">
+        <form class="form">
+            <h2>I am ready</h2>
 
+            <input class="form__input" type="text" name="name" placeholder="Enter your name" required pattern=".{3,}" />
+            <input class="form__input" type="email" name="email" placeholder="Enter your email" required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            <input class="form__input" type="text" name="company" placeholder="Enter your company" required
+                pattern=".{3,}" />
+            <button class="btn" type="submit">Download</button>
+        </form>
+    </div>
     <footer class="footer">
 
     </footer>
