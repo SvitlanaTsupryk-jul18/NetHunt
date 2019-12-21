@@ -1,17 +1,14 @@
 $text-color: #141f33;
-$btn-color: linear-gradient(to top, #ffb100, #f7846d);
-$hover-color: #fa983f;
+$btn-color: linear-gradient(
+  120deg,
+  rgb(247, 132, 109) 0%,
+  rgb(255, 177, 0) 100%
+);
+$hover-color: linear-gradient(120deg, #fa983f 0%, #fa983f 100%);
 $blue-color: #00aeef;
 $main-font: "Montserrat", sans-serif;
 $bolt-font: "Open Sans", sans-serif;
 
-%sec-padding {
-  padding: 100px 0;
-}
-
-.error {
-  border-color: red;
-}
 .container {
   max-width: 1070px;
   margin: 0 auto;
@@ -56,6 +53,7 @@ h3 {
 .btn {
   border: none;
   color: white;
+  font-family: $main-font;
   font-weight: 800;
   letter-spacing: 0.8px;
   border-radius: 5px;
@@ -64,7 +62,7 @@ h3 {
   cursor: pointer;
   transition: all 0.3s;
   &:hover {
-    background-color: $hover-color;
+    background-image: $hover-color;
   }
 }
 
@@ -84,7 +82,7 @@ h3 {
   }
   &__main {
     max-width: 595px;
-    padding-top: 60px;
+    padding-bottom: 60px;
   }
   &__aside {
     position: absolute;
@@ -100,6 +98,13 @@ h3 {
       margin-left: -130px;
       height: 100%;
     }
+  }
+  &__block {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__inner {
+    position: relative;
   }
 }
 
@@ -139,6 +144,58 @@ h3 {
       height: 13px;
     }
   }
+}
+
+.form {
+  padding: 60px;
+  &__title {
+    text-align: center;
+    line-height: 1.5;
+  }
+  &-wrapper {
+    position: absolute;
+    z-index: 2;
+    top: 180px;
+    right: 0;
+    width: 420px;
+    margin-left: 20px;
+    height: 521px;
+    border-radius: 5px;
+    box-shadow: 6.5px 24.1px 60px 0 rgba(67, 103, 138, 0.25);
+    background-color: #ffffff;
+  }
+  &__input {
+    width: 100%;
+    border-radius: 5px;
+    border: solid 1px #dddddd;
+    padding: 20px 16px;
+    font-family: $main-font;
+    margin: 7px 0 12px 0;
+    outline: none;
+    background-color: #ffffff;
+    &:active {
+      box-shadow: 1.294px 4.83px 15px 0px rgba(67, 103, 138, 0.25);
+    }
+    &-title {
+      font-size: 13px;
+      font-weight: bold;
+    }
+    &:visited {
+      background-color: #ffffff;
+    }
+  }
+  &__btn {
+    width: 100%;
+    padding: 15px 35px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.error {
+  border: 1px solid rgb(228, 92, 65);
 }
 
 // .sctitle {
