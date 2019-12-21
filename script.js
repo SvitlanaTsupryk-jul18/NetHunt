@@ -1,6 +1,9 @@
 (function() {
   // invocations
   jsForm();
+  showForm();
+
+  ///validation and sending form
 
   function jsForm() {
     let form = document.querySelector(".form");
@@ -46,7 +49,7 @@
     }
 
     function submitForm() {
-      if (!isValid) return console.log("NOT VALID");
+      if (!isValid) return alert("Please enter rigth data");
 
       // AJAX for POST request
 
@@ -86,5 +89,14 @@
         element.classList.remove("error");
       });
     }
+  }
+
+  function showForm() {
+    let btn = document.querySelector(".btn--fixed");
+    let form = document.querySelector(".form-wrapper");
+
+    btn.addEventListener("click", () => {
+      form.classList.toggle("hide");
+    });
   }
 })();

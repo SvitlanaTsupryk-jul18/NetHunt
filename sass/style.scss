@@ -63,13 +63,21 @@ h3 {
   transition: all 0.3s;
   &:hover {
     background-image: $hover-color;
+    outline: none;
+  }
+  &--fixed {
+    position: fixed;
+    right: 0;
+    bottom: 10px;
+    width: 65px;
+    height: 55px;
   }
 }
 
 .hero {
   position: relative;
   overflow: hidden;
-  margin-bottom: 45px;
+  margin-bottom: 65px;
 
   &__header {
     padding: 30px 0;
@@ -102,9 +110,6 @@ h3 {
   &__block {
     display: flex;
     justify-content: space-between;
-  }
-  &__inner {
-    position: relative;
   }
 }
 
@@ -163,6 +168,7 @@ h3 {
     border-radius: 5px;
     box-shadow: 6.5px 24.1px 60px 0 rgba(67, 103, 138, 0.25);
     background-color: #ffffff;
+    transition: all ease-in 0.3s;
   }
   &__input {
     width: 100%;
@@ -180,9 +186,6 @@ h3 {
       font-size: 13px;
       font-weight: bold;
     }
-    &:visited {
-      background-color: #ffffff;
-    }
   }
   &__btn {
     width: 100%;
@@ -191,11 +194,27 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    outline: none;
+  }
+  &__warning {
+    font-size: 12px;
+    color: rgb(228, 92, 65);
+    text-align: right;
+    margin-top: -15px;
+    visibility: hidden;
   }
 }
 
 .error {
   border: 1px solid rgb(228, 92, 65);
+}
+
+.show {
+  visibility: visible;
+}
+
+.hide {
+  transform: translateY(-500%);
 }
 
 // .sctitle {
