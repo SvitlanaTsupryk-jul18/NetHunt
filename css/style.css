@@ -2,7 +2,7 @@
   border-color: red; }
 
 .container {
-  max-width: 1140px;
+  max-width: 1070px;
   margin: 0 auto; }
 
 * {
@@ -12,124 +12,97 @@
   list-style: none;
   text-decoration: none; }
 
-@media (max-width: 1160px) {
+@media (max-width: 1110px) {
   .container {
     padding: 0 20px; } }
 
-body {
-  color: #555555;
-  font-family: "Roboto Slab", serif;
-  font-weight: 400;
-  padding-bottom: 285px;
-  scroll-behavior: smooth; }
-
-.sctitle {
-  text-transform: uppercase;
+p,
+li {
   font-family: "Montserrat", sans-serif;
+  color: #141f33;
+  line-height: 1.75; }
+
+li {
+  padding: 1em 0; }
+
+h2,
+h3 {
+  font-weight: 800;
+  font-family: "Open Sans", sans-serif; }
+
+h3 {
   font-size: 20px;
-  text-align: center;
-  position: relative;
-  padding-bottom: 60px; }
-  .sctitle:before {
-    position: absolute;
-    content: " ";
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    width: 50px;
-    height: 2px;
-    background-color: #555555; }
+  padding: 10px 0; }
 
-.undertitle {
-  font-size: 16px;
-  text-align: center;
-  margin-bottom: 70px; }
-
-.preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 3;
-  background-color: rgba(192, 48, 28, 0.7);
-  text-align: center;
-  color: #fff;
-  font-size: 30px;
-  padding: 20%;
-  transition: 1s all;
-  opacity: 1;
-  visibility: visible; }
-
-.loader {
-  width: 90px;
-  height: 90px;
-  border: 10px solid white;
-  border-radius: 50%;
-  border-top-color: #c0301c;
-  line-height: 60px;
+.btn {
+  border: none;
   color: white;
-  padding: 5px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  animation: spin 1s infinite; }
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  border-radius: 5px;
+  background-image: linear-gradient(to top, #ffb100, #f7846d);
+  box-shadow: 7.5px 13px 30px 0 rgba(247, 131, 109, 0.35);
+  cursor: pointer;
+  transition: all 0.3s; }
+  .btn:hover {
+    background-color: #fa983f; }
 
-.done {
-  opacity: 0;
-  visibility: hidden; }
+.hero {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 45px; }
+  .hero__header {
+    padding: 30px 0;
+    text-align: left; }
+  .hero__logo {
+    width: 195px;
+    height: 57px;
+    object-fit: contain; }
+  .hero__main {
+    max-width: 595px;
+    padding-top: 60px; }
+  .hero__aside {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    background-image: linear-gradient(to top, #b6e0f9, #eef2f8);
+    width: 535px;
+    height: 100%;
+    text-align: right;
+    border-bottom-left-radius: 50px; }
+    .hero__aside-img {
+      margin-left: -130px;
+      height: 100%; }
 
-#left,
-#right {
-  display: inline-block; }
+.blue {
+  text-transform: uppercase;
+  font-size: 18.5px;
+  color: #00aeef;
+  font-weight: bold;
+  letter-spacing: 0.93px; }
 
-@keyframes spin {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg); }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg); } }
+.main__title {
+  font-size: 48px;
+  padding: 38px 0;
+  letter-spacing: normal;
+  text-align: left; }
 
-@media only screen and (max-width: 768px) {
-  body {
-    padding-bottom: 195px; } }
+.main__subtitle {
+  color: #fa983f;
+  font-weight: bold; }
 
-@media only screen and (max-width: 576px) {
-  .undertitle {
-    margin-bottom: 20px; } }
+.main__text {
+  padding: 36px 0; }
 
-@media only screen and (max-width: 470px) and (min-width: 320px) {
-  body {
-    padding-bottom: 135px; }
-  .sctitle {
-    padding-bottom: 30px; }
-    .sctitle:before {
-      top: 30px; } }
-
-@keyframes rubberBand {
-  from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1); }
-  30% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-    transform: scale3d(1.25, 0.75, 1); }
-  40% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
-    transform: scale3d(0.75, 1.25, 1); }
-  50% {
-    -webkit-transform: scale3d(1.15, 0.85, 1);
-    transform: scale3d(1.15, 0.85, 1); }
-  65% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
-    transform: scale3d(0.95, 1.05, 1); }
-  75% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-    transform: scale3d(1.05, 0.95, 1); }
-  to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1); } }
-
-.rubberBand {
-  -webkit-animation-name: rubberBand;
-  animation-name: rubberBand; }
+.main__list-item {
+  position: relative;
+  padding-left: 2em; }
+  .main__list-item:before {
+    position: absolute;
+    content: "";
+    top: 1.5em;
+    left: 0;
+    background-image: url(../images/rectangle-3-copy.svg);
+    width: 19px;
+    height: 13px; }
