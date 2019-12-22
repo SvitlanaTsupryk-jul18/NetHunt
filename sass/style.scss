@@ -89,7 +89,7 @@ h3 {
     object-fit: contain;
   }
   &__main {
-    max-width: 595px;
+    display: flex;
     padding-bottom: 60px;
   }
   &__aside {
@@ -122,15 +122,15 @@ h3 {
 }
 
 .main {
+  max-width: 595px;
   &__title {
     font-size: 48px;
-
     padding: 38px 0;
     letter-spacing: normal;
     text-align: left;
   }
   &__subtitle {
-    color: $hover-color;
+    color: #fa983f;
     font-weight: bold;
   }
   &__text {
@@ -158,13 +158,9 @@ h3 {
     line-height: 1.5;
   }
   &-wrapper {
-    position: absolute;
-    z-index: 2;
-    top: 180px;
-    right: 0;
     width: 420px;
     margin-left: 20px;
-    height: 521px;
+    height: 100%;
     border-radius: 5px;
     box-shadow: 6.5px 24.1px 60px 0 rgba(67, 103, 138, 0.25);
     background-color: #ffffff;
@@ -203,6 +199,9 @@ h3 {
     margin-top: -15px;
     visibility: hidden;
   }
+  &--mobile {
+    display: none;
+  }
 }
 
 .error {
@@ -217,85 +216,73 @@ h3 {
   transform: translateY(-500%);
 }
 
-// .sctitle {
-//   // background-image: linear-gradient(to top, #eef2f8, #b6e0f9);
+@media only screen and (max-width: 768px) {
+  .form {
+    &--desktop {
+      display: none;
+    }
+    &--mobile {
+      display: block;
+    }
+    &-wrapper {
+      height: 520px;
+      margin: 20px auto;
+      margin-bottom: 400px;
+    }
+  }
 
-//   text-transform: uppercase;
-//   font-family: $main-font;
-//   font-size: 20px;
-//   text-align: center;
-//   position: relative;
-//   padding-bottom: 60px;
-//   &:before {
-//     position: absolute;
-//     content: " ";
-//     top: 50px;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     text-align: center;
-//     width: 50px;
-//     height: 2px;
-//     background-color: $text-color;
-//   }
-// }
+  .hero {
+    &__header {
+      padding: 20px 0;
+    }
+    &__logo {
+      width: 50%;
+    }
+    &__aside {
+      height: 1200px;
+      &-img {
+        position: absolute;
+        right: 0;
+        bottom: -50px;
+        margin: 0;
+        height: 60%;
+      }
+    }
+  }
+  .blue {
+    font-size: 1em;
+  }
 
-// .undertitle {
-//   font-size: 16px;
-//   text-align: center;
-//   margin-bottom: 70px;
-// }
+  .main {
+    &__title {
+      font-size: 32px;
+      padding: 20px 0;
+    }
+    &__list-item:before {
+      top: 5px;
+    }
+  }
 
-// .preloader {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   z-index: 3;
-//   background-color: $img-color;
-//   text-align: center;
-//   color: #fff;
-//   font-size: 30px;
-//   padding: 20%;
-//   transition: 1s all;
-//   opacity: 1;
-//   visibility: visible;
-// }
+  .btn--fixed {
+    top: 10px;
+  }
+  li {
+    padding: 0;
+  }
+}
 
-// .loader {
-//   width: 90px;
-//   height: 90px;
-//   border: 10px solid white;
-//   border-radius: 50%;
-//   border-top-color: #c0301c;
-//   line-height: 60px;
-//   color: white;
-//   padding: 5px;
-//   position: absolute;
-//   left: 50%;
-//   top: 50%;
-//   transform: translate(-50%, -50%);
-//   animation: spin 1s infinite;
-// }
-
-// .done {
-//   opacity: 0;
-//   visibility: hidden;
-// }
-
-// #left,
-// #right {
-//   display: inline-block;
-// }
-
-// @keyframes spin {
-//   from {
-//     transform: translate(-50%, -50%) rotate(0deg);
-//   }
-//   to {
-//     transform: translate(-50%, -50%) rotate(360deg);
-//   }
-// }
+@media only screen and (max-width: 576px) and(min-width: 320px) {
+  .form {
+    padding: 20px;
+    &-wrapper {
+      width: 100%;
+      margin-bottom: 300px;
+    }
+  }
+  .hero__aside-img {
+    height: 50%;
+  }
+}
 
 // @media only screen and (max-width: 768px) {
 //   %sec-padding {
