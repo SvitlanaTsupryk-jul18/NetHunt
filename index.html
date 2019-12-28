@@ -88,17 +88,24 @@
                     <form class="form">
                         <h2 class="form__title">I am ready to download
                             the e-book</h2>
-                        <p class="form__input-title">Name</p>
-                        <input class="form__input" type="text" name="name" placeholder="Enter your name" required
-                            pattern=".{3,}" />
-                        <p class="form__input-title">Email</p>
-                        <input class="form__input" type="email" name="email" placeholder="Enter your email" required
-                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
-                        <p class="form__input-title">Company</p>
-                        <input class="form__input" type="text" name="company" placeholder="Enter your company" required
-                            pattern=".{3,}" />
-                        <button class="btn form__btn" type="submit">Download e-book&nbsp;&nbsp;<img
-                                src="./images/shape-1.svg" /></button>
+                        <label>
+                                <p class="form__input-title">Name</p>
+                                <input class="form__input" type="text" name="name" placeholder="Enter your name" required
+                                pattern=".{3,}" />
+                            </label>
+                            <label>
+                                <p class="form__input-title">Email</p>
+                                <input class="form__input" type="email" name="email" placeholder="Enter your email" required
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                            </label>
+                            <label>
+                                <p class="form__input-title">Company</p>
+                                <input class="form__input" type="text" name="company" placeholder="Enter your company"
+                                required pattern=".{3,}" />
+                            </label>
+                            <button class="btn form__btn" type="submit">Download e-book&nbsp;&nbsp;<img
+                                    src="./images/shape-1.svg" alt="download icon" />
+                            </button>
                     </form>
                 </div>
             </div>
